@@ -1,6 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import Portfolio from "./Pages/Portfolio";
+import Contact from "./Pages/Contact";
+import Resume from "./Pages/Resume";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const routing = (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/resume" component={Resume} />
+      </Switch>
+    </div>
+  </Router>
+);
+
+ReactDOM.render(routing, document.getElementById("root"));

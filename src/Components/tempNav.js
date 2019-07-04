@@ -9,9 +9,11 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import FolderIcon from "@material-ui/icons/Folder";
-import CodeIcon from "@material-ui/icons/Code";
 import EmailIcon from "@material-ui/icons/Email";
 import DescriptionIcon from "@material-ui/icons/Description";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   list: {
@@ -20,12 +22,28 @@ const useStyles = makeStyles({
   fullList: {
     width: "auto"
   },
-  nav: {
-    backgroundColor: "grey"
+  name: {
+    fontSize: "1.9rem",
+    color: "#F64C72",
+    fontWeight: 500
+  },
+  lastName: {
+    color: "F64C72",
+    fontWeight: 300
+  },
+  menuIcon: {
+    fontSize: "2.0rem",
+    color: "#F64C72"
+  },
+  link: {
+    color: "black",
+    textDecoration: "none",
+    fontSize: "1.2rem",
+
   }
 });
 
-export default function TemporaryDrawer() {
+export default function TempNav() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false
@@ -43,10 +61,20 @@ export default function TemporaryDrawer() {
   };
 
   return (
-    <div className={classes.nav}>
-      <Button onClick={toggleDrawer("left", true)}>
-        <MenuIcon />
-      </Button>
+    <div>
+      <Grid container spacing={1}>
+        <Grid item xs={1}>
+          <Button onClick={toggleDrawer("left", true)}>
+            <MenuIcon className={classes.menuIcon} />
+          </Button>
+        </Grid>
+        <Grid item xs={11}>
+          <Typography paragraph className={classes.name}>
+            Justin <span className={classes.lastName}>Mozley</span>
+          </Typography>
+        </Grid>
+      </Grid>
+
       <Drawer open={state.left} onClose={toggleDrawer("left", false)}>
         <div
           className={classes.list}
@@ -55,30 +83,38 @@ export default function TemporaryDrawer() {
           onKeyDown={toggleDrawer("left", false)}
         >
           <List>
-            <ListItem button key="Home">
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItem>
-            <ListItem button key="Portfolio">
-              <ListItemIcon>
-                <FolderIcon />
-              </ListItemIcon>
-              <ListItemText primary="Portfolio" />
-            </ListItem>
-            <ListItem button key="Contact">
-              <ListItemIcon>
-                <EmailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Contact" />
-            </ListItem>
-            <ListItem button key="Resume">
-              <ListItemIcon>
-                <DescriptionIcon />
-              </ListItemIcon>
-              <ListItemText primary="Resume" />
-            </ListItem>
+            <Link to="/" className={classes.link}>
+              <ListItem button key="Home">
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItem>
+            </Link>
+            <Link to="/portfolio" className={classes.link}>
+              <ListItem button key="Portfolio">
+                <ListItemIcon>
+                  <FolderIcon />
+                </ListItemIcon>
+                <ListItemText primary="Portfolio" />
+              </ListItem>
+            </Link>
+            <Link to="/contact" className={classes.link}>
+              <ListItem button key="Contact">
+                <ListItemIcon>
+                  <EmailIcon />
+                </ListItemIcon>
+                <ListItemText primary="Contact" />
+              </ListItem>
+            </Link>
+            <Link to="/resume" className={classes.link}>
+              <ListItem button key="Resume">
+                <ListItemIcon>
+                  <DescriptionIcon />
+                </ListItemIcon>
+                <ListItemText primary="Resume" />
+              </ListItem>
+            </Link>
           </List>
         </div>
       </Drawer>

@@ -6,6 +6,7 @@ import App from "./App";
 import Portfolio from "./Pages/Portfolio";
 import Contact from "./Pages/Contact";
 import Resume from "./Pages/Resume";
+import ProjectCard from "./Components/ProjectCard";
 
 const routing = (
   <Router>
@@ -15,6 +16,7 @@ const routing = (
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/contact" component={Contact} />
         <Route path="/resume" component={Resume} />
+        <Route path="/temp" component={ProjectCard} />
       </Switch>
     </div>
   </Router>

@@ -14,7 +14,7 @@ class Portfolio extends Component {
       <div>
         <TempNav />
         <Container maxWidth="lg">
-          <Grid container spacing={4} justify="center">
+          <Grid container spacing={4}>
             {this.state.Projects.map(project => (
               <Grid item xs={6} align="center">
                 <ProjectCard

@@ -22,39 +22,39 @@ export default function ProjectCard(props) {
 
   return (
     <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={props.image_url}
-          title={props.title}
-        />
-        <CardActions>
-          <Button
-            size="small"
-            color="primary"
-            href={props.site_url}
-            target="_blank"
-            rel="noopener"
-          >
-            Site Link
-          </Button>
-          <Button
-            size="small"
-            color="primary"
-            href={props.repo_url}
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub Repo
-          </Button>
-        </CardActions>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
+      <CardMedia
+        className={classes.media}
+        image={props.image_url}
+        title={props.title}
+      />
+      <CardActions>
+        <Button
+          size="small"
+          color="primary"
+          href={props.site_url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Site Link
+        </Button>
+        <Button
+          size="small"
+          color="primary"
+          href={props.repo_url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Repo
+        </Button>
+      </CardActions>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {props.title}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {props.description}
+        </Typography>
+      </CardContent>
     </Card>
   );
 }

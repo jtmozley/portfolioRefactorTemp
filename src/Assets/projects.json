@@ -1,17 +1,10 @@
 [
   {
-    "title": "Train Scheduler",
-    "description": "A personal train scheduling app to provide up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station.",
-    "image_url": "https://i.imgur.com/7n3z7WL.png",
-    "site_url": "https://jtmozley.github.io/Train-Scheduler/",
-    "repo_url": "https://github.com/jtmozley/Train-Scheduler"
-  },
-  {
-    "title": "Tasty Delicious",
-    "description": "Ever wish you could find recipes with the food you have in your cabinet? Tell us what you have and we will tell you the things you can recipes you can make! If you are missing items, we will help you find a grocery store! And of course if you give up, we can find fast food close by!",
-    "image_url": "https://i.imgur.com/s3oCru6.png",
-    "site_url": "https://the-master-chefs.github.io/project1/",
-    "repo_url": "https://github.com/the-master-chefs/project1"
+    "title": "Light Bites",
+    "description": "Light Bites is a meal ordering service. Its mission is to provide its community with fresh, nutritious meal options for busy lifestyles.",
+    "image_url": "https://i.imgur.com/xK2Jm9z.png",
+    "site_url": "https://lightbites.herokuapp.com",
+    "repo_url": "https://github.com/lightbites/LightBites_V2"
   },
   {
     "title": "Clicky Game",
@@ -21,10 +14,17 @@
     "repo_url": "https://github.com/jtmozley/clickygame"
   },
   {
-    "title": "Light Bites",
-    "description": "Light Bites is a meal ordering service. Its mission is to provide its community with fresh, nutritious meal options for busy lifestyles.",
-    "image_url": "https://i.imgur.com/xK2Jm9z.png",
-    "site_url": "https://lightbites.herokuapp.com",
-    "repo_url": "https://github.com/lightbites/LightBites_V2"
+    "title": "Tasty Delicious",
+    "description": "Ever wish you could find recipes with the food you have in your cabinet? Tell us what you have and we will tell you the things you can recipes you can make! If you are missing items, we will help you find a grocery store! And of course if you give up, we can find fast food close by!",
+    "image_url": "https://i.imgur.com/s3oCru6.png",
+    "site_url": "https://the-master-chefs.github.io/project1/",
+    "repo_url": "https://github.com/the-master-chefs/project1"
+  },
+  {
+    "title": "Train Scheduler",
+    "description": "A personal train scheduling app to provide up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station.",
+    "image_url": "https://i.imgur.com/7n3z7WL.png",
+    "site_url": "https://jtmozley.github.io/Train-Scheduler/",
+    "repo_url": "https://github.com/jtmozley/Train-Scheduler"
   }
 ]

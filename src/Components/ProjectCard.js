@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     height: 480
   },
   media: {
-    height: 270
+    height: 270,
+    borderBottom: "1px solid rgba(143, 143, 143, 0.15)"
   }
 });
 
